@@ -1,24 +1,69 @@
 ﻿@model People2.Models.PersonMod 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
 
-<h2>Edit Person</h2>
+        h2{
+            color: white;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            margin-top: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #080710;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+                color: white;
+            }
+
+    </style>
+</head>
+<body>
+<h2>Edit Persons Details</h2>
 
 <form asp-action="Edit" method="post">
     <div class="form-group">
-        <label asp-for="IdNum" class="control-label"></label>
+        <label asp-for="IdNum" class="control-label">ID Number</label>
         <input asp-for="IdNum" class="form-control" readonly /> <!-- IDNum is typically not editable -->
     </div>
 
     <div class="form-group">
-        <label asp-for="FName" class="control-label"></label>
+        <label asp-for="FName" class="control-label">First Name</label>
         <input asp-for="FName" class="form-control" />
         <span asp-validation-for="FName" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="LName" class="control-label"></label>
+        <label asp-for="LName" class="control-label">Surname</label>
         <input asp-for="LName" class="form-control" />
         <span asp-validation-for="LName" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>
+
+</body>
+</html>
