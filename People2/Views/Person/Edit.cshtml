@@ -1,0 +1,24 @@
+﻿@model People2.Models.PersonMod 
+
+<h2>Edit Person</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="IdNum" class="control-label"></label>
+        <input asp-for="IdNum" class="form-control" readonly /> <!-- IDNum is typically not editable -->
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FName" class="control-label"></label>
+        <input asp-for="FName" class="form-control" />
+        <span asp-validation-for="FName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LName" class="control-label"></label>
+        <input asp-for="LName" class="form-control" />
+        <span asp-validation-for="LName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

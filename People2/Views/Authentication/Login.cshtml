@@ -1,0 +1,103 @@
+﻿@model People2.Models.LoginMod
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FinTrack</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #1d1d23;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures body takes full height */
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 35px;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            flex-grow: 1; /* Allows the login container to take available space */
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+            color: white;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            margin-top: 20px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            color: white;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #080710;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+                color: white;
+            }
+
+      
+    </style>
+</head>
+<body>
+
+    <!-- The header is handled by layout.cshtml -->
+    <!-- Login Form -->
+    <div class="login-container">
+        <form asp-controller="Authentication" asp-action="Login" method="post">
+            <h2>Login</h2>
+
+            <label for="UserName">Username</label>
+            <input asp-for="UserName" placeholder="Enter your username" required />
+
+            <label for="Password">Password</label>
+            <input asp-for="Password" type="password" placeholder="Enter your password" required />
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- The footer is handled by layout.cshtml -->
+
+</body>
+</html>

@@ -3,42 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to FinTrack</title>
+    <title>Home - FinTrack</title>
     <style>
         body {
+            background-color: #1d1d23;
+            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
         }
 
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            margin: 50px auto;
+            padding: 20px;
         }
 
-        .welcome-heading {
+        .header-welcome {
+            color: #e58f00;
             font-size: 36px;
-            color: #007bff;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .header-description {
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: #e58f00;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background-color: #333;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .card-header {
+            font-size: 18px;
+            color: #e58f00;
             margin-bottom: 10px;
         }
 
-        .welcome-text {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
+        .card-body {
+            font-size: 16px;
+        }
+
+            .card-body ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .card-body li {
+                margin-bottom: 10px;
+            }
+
+        .account-status {
+            color: green;
+            font-weight: bold;
+        }
+
+        .closed-status {
+            color: red;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1 class="welcome-heading">Welcome to FinTrack</h1>
-        <p class="welcome-text">FinTrack is your all-in-one solution for managing people, their accounts, and transactions efficiently. With an intuitive interface and powerful features, you can easily track individuals, manage accounts, and log transactions seamlessly. Stay organized and in control of your financial records with FinTrack!</p>
+        <!-- Welcome and Description -->
+        <div class="header-welcome">Welcome to FinTrack</div>
+        <div class="header-description">
+            FinTrack is a comprehensive platform designed to manage people, their accounts, and the transactions made against these accounts. It provides users with detailed insights into account balances, transaction history, and the ability to efficiently track and manage financial data.
+        </div>
+
+        <!-- People Section -->
+        <div class="section-title">People</div>
+
+        <div class="card">
+            <div class="card-header">John Doe</div>
+            <div class="card-body">
+                <ul>
+                    <li>Full Name: John Doe</li>
+                    <li>ID Number: 12345</li>
+                    <li>Email: john.doe@example.com</li>
+                    <li>Phone: 555-5555</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Jane Smith</div>
+            <div class="card-body">
+                <ul>
+                    <li>Full Name: Jane Smith</li>
+                    <li>ID Number: 67890</li>
+                    <li>Email: jane.smith@example.com</li>
+                    <li>Phone: 555-1234</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Accounts Section -->
+        <div class="section-title">Accounts</div>
+
+        <div class="card">
+            <div class="card-header">Account 001 - John Doe</div>
+            <div class="card-body">
+                <ul>
+                    <li>Account Number: 001</li>
+                    <li>Outstanding Balance: $500</li>
+                    <li>Status: <span class="account-status">Open</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Account 002 - Jane Smith</div>
+            <div class="card-body">
+                <ul>
+                    <li>Account Number: 002</li>
+                    <li>Outstanding Balance: $200</li>
+                    <li>Status: <span class="account-status">Open</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Transactions Section -->
+        <div class="section-title">Transactions</div>
+
+        <div class="card">
+            <div class="card-header">Transactions for Account 001 - John Doe</div>
+            <div class="card-body">
+                <ul>
+                    <li>Transaction ID: 1001 - Amount: $200 - Date: 2025-02-15</li>
+                    <li>Transaction ID: 1002 - Amount: $300 - Date: 2025-02-20</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Transactions for Account 002 - Jane Smith</div>
+            <div class="card-body">
+                <ul>
+                    <li>Transaction ID: 2001 - Amount: $100 - Date: 2025-02-10</li>
+                    <li>Transaction ID: 2002 - Amount: $100 - Date: 2025-02-18</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>

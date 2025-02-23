@@ -1,0 +1,30 @@
+﻿@model People2.Models.PersonMod
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+
+        h2{
+        color: white;
+        }
+
+        p{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<h2>Delete Person</h2>
+
+<p>Are you sure you want to delete the person <strong>@Model.FName @Model.LName</strong> with ID Number <strong>@Model.IdNum</strong>?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Yes, delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>
+</body>
+</html>
